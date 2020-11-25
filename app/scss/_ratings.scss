@@ -1,0 +1,14 @@
+.ratings {
+
+  &__star {
+    float: left;
+    width: 2%;
+    padding: 5px;
+  }
+
+  &__review::after{
+    content: "";
+    clear: both;
+    display: table;
+  }
+}

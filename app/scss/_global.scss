@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Spartan', sans-serif;
+  font-size: $fontSizeM;
+  min-height: 100vh;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  color: $priColDark;
+}
+
+h1{
+  font-size: $fontSizeXL;
+}
+
+h1, .ratings{
+  color: $priColDark;
+  font-weight: 700;
+}
+
+p{
+  color: $neuColDark;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

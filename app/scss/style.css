@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Spartan", sans-serif;
+  font-size: 0.9375rem;
+  min-height: 100vh;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  color: #502050;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h1, .ratings {
+  color: #502050;
+  font-weight: 700;
+}
+
+p {
+  color: #937b92;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.ratings__star {
+  float: left;
+  width: 2%;
+  padding: 5px;
+}
+.ratings__review::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*# sourceMappingURL=style.css.map */
