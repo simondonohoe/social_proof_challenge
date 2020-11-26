@@ -1,14 +1,42 @@
 .ratings {
+  // display: flex;
+  
+  // gap: 1em;
+  // max-width: 25rem;
+  padding: 0;
+  // margin-left: auto;
+  // margin-right: auto;
 
-  &__star {
-    float: left;
-    width: 2%;
-    padding: 5px;
+  @media(min-width: 50em){
+    flex-direction: column;
+     max-width: 100%;
+     justify-content: center;
+    // margin-left: auto;
+    // margin-right: auto;
   }
 
-  &__review::after{
-    content: "";
-    clear: both;
-    display: table;
+  .item{
+    display: flex;
+    flex-direction: column;
+    color: $priColDark;
+    background: $neuColLight;
+    font-weight: $fWeightL;
+    padding: 0.5rem;
+    
+
+    @media (min-width: 50em) {
+      flex-direction: row;
+    }
+
+    .stars{
+      display: flex;
+      // flex-direction: column;
+      background-image: url(/images/icon-star.svg);
+
+      @media (min-width: 50em) {
+        flex-direction: row;
+        max-width: 100%;
+      }
+    }
   }
 }
