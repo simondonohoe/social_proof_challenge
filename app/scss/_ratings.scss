@@ -1,41 +1,60 @@
 .ratings {
-  // display: flex;
-  
-  // gap: 1em;
-  // max-width: 25rem;
-  padding: 0;
-  // margin-left: auto;
-  // margin-right: auto;
+  display: flex;
 
-  @media(min-width: 50em){
-    flex-direction: column;
-     max-width: 100%;
-     justify-content: center;
-    // margin-left: auto;
-    // margin-right: auto;
+  flex-direction: column;
+  // gap: 1em;
+  max-width: 25rem;
+  padding: 0;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 50em) {
+    max-width: 100%;
+    // justify-content: center;
   }
 
-  .item{
+  .item {
     display: flex;
     flex-direction: column;
     color: $priColDark;
     background: $neuColLight;
     font-weight: $fWeightL;
-    padding: 0.5rem;
-    
+    padding: 0.75rem 2rem;
+    max-width: 25rem;
+    // margin-left: auto;
+    // margin-right: auto;
+
+    .stars {
+      content: "";
+      width: 100px;
+      height: 1rem;
+      margin: 0 auto;
+      display: block;
+      background-image: url(/images/icon-star.svg);
+      margin-bottom: 0.5rem;
+      background-repeat: space;
+
+      @media (min-width: 50em) {
+        margin: auto 0;
+      }
+    }
+
+    .review {
+      text-align: center;
+      padding-left: 1rem;
+    }
 
     @media (min-width: 50em) {
       flex-direction: row;
-    }
+      max-width: 30rem;
+      align-content: center;
 
-    .stars{
-      display: flex;
-      // flex-direction: column;
-      background-image: url(/images/icon-star.svg);
-
-      @media (min-width: 50em) {
-        flex-direction: row;
-        max-width: 100%;
+      &:first-of-type{
+        transform: translateX(-3rem);
+      }
+      &:last-of-type{
+        transform: translateX(3rem);
       }
     }
   }

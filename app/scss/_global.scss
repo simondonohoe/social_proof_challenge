@@ -10,15 +10,37 @@ body {
   font-family: "Spartan", sans-serif;
   font-size: $fontSizeM;
   text-align: center;
+  background-image: url(/images/bg-pattern-top-desktop.svg), url(/images/bg-pattern-bottom-desktop.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  background-size: max(50%, 400px);
   min-height: 100vh;
   line-height: 1.5;
   scroll-behavior: smooth;
   color: $priColDark;
+  
+  .attribution{
+    transform: translateY(3rem);
+    
+    @media (min-width: 50em) {
+      transform: translateY(9rem);
+    }
+  }
 }
+
 
 h1 {
   font-size: $fontSizeXL;
   font-weight: $fWeightL;
+  line-height: 1;
+  max-width: 12ch;
+  margin-bottom: 0;
+
+  @media (max-width: 50em) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+  }
 }
 
 li {
@@ -44,12 +66,12 @@ img {
 // grid layout
 main {
   display: grid;
-  gap: 3rem;
+  gap: 3rem 1rem;
 }
 
 @media (min-width: 50em) {
   main {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     text-align: left;
   }
 
@@ -59,6 +81,7 @@ main {
 
   .ratings {
     grid-column: 2 / 3;
+    align-self: center;
   }
 
   .verifiedBuyers {

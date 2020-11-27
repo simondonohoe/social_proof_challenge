@@ -6,12 +6,21 @@
   li {
     background: $priColDark;
     padding: $spacerTwo;
+
+    @media (min-width: 50em) {
+      &:nth-child(2) {
+        transform: translateY(3rem);
+      }
+      &:nth-child(3) {
+        transform: translateY(6rem);
+      }
+    }
   }
 
   &__card {
     width: 100%;
     max-width: 25rem;
-    
+
     .userDetails {
       display: flex;
 
