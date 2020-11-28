@@ -76,8 +76,15 @@ h1 {
   }
 }
 
+ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 li {
   border-radius: 0.5rem;
+  max-width: 25rem;
 }
 
 a,
@@ -91,20 +98,17 @@ ol[role=list] {
   list-style: none;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
 main {
   display: grid;
   gap: 3rem 1rem;
+  margin-top: 3rem;
 }
 
 @media (min-width: 50em) {
   main {
     grid-template-columns: 1fr 1.5fr;
     text-align: left;
+    margin-top: 6rem;
   }
 
   .header {
@@ -133,6 +137,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 300px;
   max-width: 25rem;
   padding: 0;
   margin-left: auto;
@@ -154,27 +159,28 @@ main {
   color: #502050;
   background: #f7f2f7;
   font-weight: 700;
-  padding: 0.75rem 2rem;
-  max-width: 25rem;
+  width: 100%;
 }
 .ratings .item .stars {
-  content: "";
-  width: 100px;
-  height: 1rem;
-  margin: 0 auto;
-  display: block;
-  background-image: url(/images/icon-star.svg);
-  margin-bottom: 0.5rem;
-  background-repeat: space;
-}
-@media (min-width: 50em) {
-  .ratings .item .stars {
-    margin: auto 0;
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .ratings .item .review {
   text-align: center;
-  padding-left: 1rem;
+}
+.ratings .item .review p {
+  margin: 1rem auto 0;
+}
+@media (min-width: 50em) {
+  .ratings .item .review {
+    padding-left: 1rem;
+  }
+  .ratings .item .review p {
+    margin: 0.5rem 2rem 0.5rem 0;
+  }
 }
 @media (min-width: 50em) {
   .ratings .item {
@@ -182,9 +188,10 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    max-width: 30rem;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100%;
   }
   .ratings .item:first-of-type {
     -webkit-transform: translateX(-3rem);
@@ -194,6 +201,9 @@ main {
     -webkit-transform: translateX(3rem);
             transform: translateX(3rem);
   }
+}
+.ratings img {
+  margin: 0 0.125rem;
 }
 
 .verifiedBuyers {

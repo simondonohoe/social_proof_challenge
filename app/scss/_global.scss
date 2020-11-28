@@ -43,8 +43,12 @@ h1 {
   }
 }
 
+ul{
+  align-items: center;
+}
 li {
   border-radius: $borRad;
+  max-width: 25rem;
 }
 
 a,
@@ -58,21 +62,23 @@ ol[role="list"] {
   list-style: none;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
+// img {
+//   max-width: 100%;
+//   display: block;
+// }
 
 // grid layout
 main {
   display: grid;
   gap: 3rem 1rem;
+  margin-top: 3rem;
 }
 
 @media (min-width: 50em) {
   main {
     grid-template-columns: 1fr 1.5fr;
     text-align: left;
+    margin-top: 6rem;
   }
 
   .header {
