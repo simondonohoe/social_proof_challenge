@@ -137,7 +137,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 300px;
+  width: 18.75rem;
   max-width: 25rem;
   padding: 0;
   margin-left: auto;
@@ -146,6 +146,7 @@ main {
 @media (min-width: 50em) {
   .ratings {
     max-width: 100%;
+    padding-left: 0.5rem;
   }
 }
 .ratings .item {
@@ -160,6 +161,7 @@ main {
   background: #f7f2f7;
   font-weight: 700;
   width: 100%;
+  padding-left: 0.625rem;
 }
 .ratings .item .stars {
   display: -webkit-box;
