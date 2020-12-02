@@ -160,8 +160,8 @@ main {
   color: #502050;
   background: #f7f2f7;
   font-weight: 700;
-  width: 100%;
-  padding-left: 0.625rem;
+  width: 70vw;
+  min-width: 18rem;
 }
 .ratings .item .stars {
   display: -webkit-box;
@@ -194,6 +194,7 @@ main {
         -ms-flex-align: center;
             align-items: center;
     max-width: 100%;
+    padding-left: 0.625rem;
   }
   .ratings .item:first-of-type {
     -webkit-transform: translateX(-3rem);
